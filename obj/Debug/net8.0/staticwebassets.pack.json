@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\shiva\\Downloads\\InvoiceApp_fixed\\InvoiceApp\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\shiva\\Downloads\\InvoiceApp_fixed\\InvoiceApp\\wwwroot\\script.js",
+      "PackagePath": "staticwebassets\\script.js"
+    },
+    {
+      "Id": "C:\\Users\\shiva\\Downloads\\InvoiceApp_fixed\\InvoiceApp\\wwwroot\\styles.css",
+      "PackagePath": "staticwebassets\\styles.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.InvoiceApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.InvoiceApp.props",
+      "PackagePath": "build\\InvoiceApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.InvoiceApp.props",
+      "PackagePath": "buildMultiTargeting\\InvoiceApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.InvoiceApp.props",
+      "PackagePath": "buildTransitive\\InvoiceApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

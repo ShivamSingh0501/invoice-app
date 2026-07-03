@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "Hash": "cvKzuLkJ6uYXv/GpuBQ3gFV+BWCxjp4mlPDK0yfirvw=",
+  "Source": "InvoiceApp",
+  "BasePath": "_content/InvoiceApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "InvoiceApp\\wwwroot",
+      "Source": "InvoiceApp",
+      "ContentRoot": "C:\\Users\\shiva\\Downloads\\InvoiceApp_fixed\\InvoiceApp\\wwwroot\\",
+      "BasePath": "_content/InvoiceApp",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\shiva\\Downloads\\InvoiceApp_fixed\\InvoiceApp\\wwwroot\\index.html",
+      "SourceId": "InvoiceApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\shiva\\Downloads\\InvoiceApp_fixed\\InvoiceApp\\wwwroot\\",
+      "BasePath": "_content/InvoiceApp",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\shiva\\Downloads\\InvoiceApp_fixed\\InvoiceApp\\wwwroot\\script.js",
+      "SourceId": "InvoiceApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\shiva\\Downloads\\InvoiceApp_fixed\\InvoiceApp\\wwwroot\\",
+      "BasePath": "_content/InvoiceApp",
+      "RelativePath": "script.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\script.js"
+    },
+    {
+      "Identity": "C:\\Users\\shiva\\Downloads\\InvoiceApp_fixed\\InvoiceApp\\wwwroot\\styles.css",
+      "SourceId": "InvoiceApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\shiva\\Downloads\\InvoiceApp_fixed\\InvoiceApp\\wwwroot\\",
+      "BasePath": "_content/InvoiceApp",
+      "RelativePath": "styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\styles.css"
+    }
+  ]
+}
