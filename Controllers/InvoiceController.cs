@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using InvoiceApp.Data;
 using InvoiceApp.Models;
-using System.Collections.Generic;
+using System.Linq;
 
 namespace InvoiceApp.Controllers
 {
@@ -8,8 +10,15 @@ namespace InvoiceApp.Controllers
     [Route("api/[controller]")]
     public class InvoiceController : ControllerBase
     {
+        private readonly AppDbContext _db;
+
+        public InvoiceController(AppDbContext db)
+        {
+            _db = db;
+        }
+
         /// <summary>
-        /// Returns the current invoice with its line items.
+        /// Returns the current invoice with its line items, read from the database.
         /// </summary>
         [HttpGet]
         [ProducesResponseType(typeof(InvoiceDto), 200)]
@@ -18,24 +27,26 @@ namespace InvoiceApp.Controllers
         {
             // Previously: "List<Item> items = null;" then checked items.Count == 0
             // which threw a NullReferenceException before any data could be returned.
-            // Fixed: build a real, non-null invoice with items.
-            var invoice = new InvoiceDto
-            {
-                InvoiceId = 1,
-                CustomerName = "John Doe",
-                Items = new List<Item>
-                {
-                    new Item { Name = "Widget A", Price = 19.99 },
-                    new Item { Name = "Widget B", Price = 5.50 }
-                }
-            };
+            // Fixed: query real invoice data from SQLite via EF Core.
+            var invoice = _db.Invoices
+                .Include(i => i.Items)
+                .FirstOrDefault(i => i.InvoiceID == 1);
 
-            if (invoice.Items.Count == 0)
+            if (invoice == null || invoice.Items.Count == 0)
             {
                 return NotFound("No invoice found");
             }
 
-            return Ok(invoice);
+            var dto = new InvoiceDto
+            {
+                InvoiceId = invoice.InvoiceID,
+                CustomerName = invoice.CustomerName,
+                Items = invoice.Items
+                    .Select(i => new Item { Name = i.Name, Price = i.Price })
+                    .ToList()
+            };
+
+            return Ok(dto);
         }
     }
 }
